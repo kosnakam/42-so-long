@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:28 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/19 18:06:22 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:46:40 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_close_map(t_mlx *mlx)
 	i = 0;
 	while (mlx->map[i])
 		free(mlx->map[i++]);
+	free(mlx->map);
 }
 
 int	ft_can_clear(t_mlx *mlx, int y, int x)

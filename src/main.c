@@ -6,17 +6,17 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:06:01 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/19 18:15:57 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:47:28 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// __attribute__((destructor))
-// void	destructor(void)
-// {
-// 	system("leaks -q so_long 1>&2");
-// }
+__attribute__((destructor))
+void	destructor(void)
+{
+	system("leaks -q so_long 1>&2");
+}
 
 void	ft_error(char *msg, t_mlx *mlx)
 {
@@ -62,7 +62,7 @@ int	main(int argc, char **argv)
 	t_mlx	mlx;
 
 	if (argc != 2)
-		ft_error("引数に正しいマップのパスを入力してください", &mlx);
+		ft_merror("引数に正しいマップのパスを入力してください");
 	ft_window_size(&mlx, argv);
 	mlx.mlx = mlx_init();
 	mlx.mlx_win = mlx_new_window(mlx.mlx, mlx.win_x, mlx.win_y, "game");
