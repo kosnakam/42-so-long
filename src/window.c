@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:10:57 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/23 18:57:24 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:07:48 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_line_count(t_mlx *mlx, int fd)
 			break ;
 	}
 	mlx->map_x = count;
-	if (count >= 53)
+	if (count >= 54)
 		ft_merror("無効なマップです");
 	mlx->win_x = count * SIZE;
 }
