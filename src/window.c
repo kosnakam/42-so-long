@@ -6,31 +6,33 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:10:57 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/19 16:06:10 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/23 18:57:24 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	ft_line_len(t_mlx *mlx, int fd)
+void	ft_line_count(t_mlx *mlx, int fd)
 {
 	char	buffer[1];
-	int		len;
+	int		count;
 	int		bytes;
 
 	buffer[0] = '\0';
 	bytes = 1;
-	len = 0;
+	count = 0;
 	while (bytes == 1)
 	{
 		bytes = read(fd, buffer, 1);
 		if (buffer[0] != '\n')
-			len++;
+			count++;
 		else
 			break ;
 	}
-	mlx->map_x = len;
-	mlx->win_x = len * SIZE;
+	mlx->map_x = count;
+	if (count >= 53)
+		ft_merror("無効なマップです");
+	mlx->win_x = count * SIZE;
 }
 
 void	ft_count_lines(t_mlx *mlx, int fd)
@@ -50,6 +52,8 @@ void	ft_count_lines(t_mlx *mlx, int fd)
 			count++;
 	}
 	mlx->map_y = count;
+	if (count >= 30)
+		ft_merror("無効なマップです");
 	mlx->win_y = count * SIZE;
 }
 
@@ -70,6 +74,6 @@ void	ft_window_size(t_mlx *mlx, char **argv)
 	if (ft_strnstr(argv[1], ".ber", ft_strlen(argv[1])) == NULL)
 		ft_merror("マップのパスが無効です");
 	mlx->argv = argv[1];
-	ft_line_len(mlx, fd);
+	ft_line_count(mlx, fd);
 	ft_count_lines(mlx, fd);
 }
