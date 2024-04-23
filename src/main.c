@@ -6,17 +6,17 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:06:01 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/22 19:47:28 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/23 18:10:17 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-__attribute__((destructor))
-void	destructor(void)
-{
-	system("leaks -q so_long 1>&2");
-}
+// __attribute__((destructor))
+// void	destructor(void)
+// {
+// 	system("leaks -q so_long 1>&2");
+// }
 
 void	ft_error(char *msg, t_mlx *mlx)
 {

@@ -6,7 +6,7 @@
 #    By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 14:16:16 by kosnakam          #+#    #+#              #
-#    Updated: 2024/04/18 16:10:33 by kosnakam         ###   ########.fr        #
+#    Updated: 2024/04/23 18:13:08 by kosnakam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,5 +51,8 @@ fclean: clean
 	@echo $(R)Removed [$(NAME)]$(X)
 
 re: fclean all
+
+norm:
+	@ls | grep -i -v -E 'minilibx_opengl_20191021' | xargs -n 1 norminette
 
 .PHONY: all clean fclean re
