@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:06:01 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/23 18:10:17 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:02:22 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main(int argc, char **argv)
 	t_mlx	mlx;
 
 	if (argc != 2)
-		ft_merror("引数に正しいマップのパスを入力してください");
+		ft_merror("Error\n引数に正しいマップのパスを入力してください");
 	ft_window_size(&mlx, argv);
 	mlx.mlx = mlx_init();
 	mlx.mlx_win = mlx_new_window(mlx.mlx, mlx.win_x, mlx.win_y, "game");

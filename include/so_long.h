@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:41:50 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/23 18:43:43 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:00:09 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ typedef struct s_mlx
 	void	*mlx;
 	void	*mlx_win;
 	void	*img;
-	void	*addr;
 	char	*argv;
 	char	**map;
 	char	**map_c;

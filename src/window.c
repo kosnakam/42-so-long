@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:10:57 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/23 19:07:48 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:33:16 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_line_count(t_mlx *mlx, int fd)
 	}
 	mlx->map_x = count;
 	if (count >= 54)
-		ft_merror("無効なマップです");
+		ft_merror("Error\n無効なマップです");
 	mlx->win_x = count * SIZE;
 }
 
@@ -53,7 +53,7 @@ void	ft_count_lines(t_mlx *mlx, int fd)
 	}
 	mlx->map_y = count;
 	if (count >= 30)
-		ft_merror("無効なマップです");
+		ft_merror("Error\n無効なマップです");
 	mlx->win_y = count * SIZE;
 }
 
@@ -70,9 +70,9 @@ void	ft_window_size(t_mlx *mlx, char **argv)
 
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
-		ft_merror("開けんかった");
+		ft_merror("Error\n開けんかった");
 	if (ft_strnstr(argv[1], ".ber", ft_strlen(argv[1])) == NULL)
-		ft_merror("マップのパスが無効です");
+		ft_merror("Error\nマップのパスが無効です");
 	mlx->argv = argv[1];
 	ft_line_count(mlx, fd);
 	ft_count_lines(mlx, fd);

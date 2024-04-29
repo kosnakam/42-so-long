@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:23:52 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/23 18:43:36 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:01:55 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	ft_put_piece(t_mlx *mlx, t_img *img, int y, int x)
 	else if (mlx->map[y][x] == '0')
 		;
 	else
-		ft_error("無効なマップです", mlx);
+		ft_error("Error\n無効なマップです", mlx);
 	ft_put_img(*img, x * SIZE, y * SIZE);
 }
