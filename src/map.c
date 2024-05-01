@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:28 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/29 19:32:52 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:46:50 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void	ft_clear_check(t_mlx *mlx, int y, int x)
 {
 	if (mlx->map_c[y][x] == '1')
 		;
+	else if (mlx->map_c[y][x] == 'E')
+		mlx->map_c[y][x] = '1';
 	else
 	{
 		mlx->map_c[y][x] = '1';
