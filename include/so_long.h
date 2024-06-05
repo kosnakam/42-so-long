@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:41:50 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/29 18:00:09 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:09:09 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ void	ft_move_left(t_mlx *mlx);
 void	ft_move_right(t_mlx *mlx);
 int		ft_move_check(t_mlx *mlx, int x, int y);
 void	ft_clean_map(t_mlx *mlx);
-void	ft_close_map(t_mlx *mlx);
 void	ft_put_piece(t_mlx *mlx, t_img *img, int y, int x);
 
 #endif

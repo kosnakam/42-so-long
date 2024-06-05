@@ -6,13 +6,13 @@
 #    By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 14:16:16 by kosnakam          #+#    #+#              #
-#    Updated: 2024/04/23 18:13:08 by kosnakam         ###   ########.fr        #
+#    Updated: 2024/06/05 17:02:48 by kosnakam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+# FLAGS = -Wall -Wextra -Werror
 IFRAGS = -Iminilibx_opengl_20191021 -Iinclude -Iutils/gnl -Iutils/printf -Iutils/libft
 MFLAGS = -Lminilibx_opengl_20191021 -lmlx -lz -framework OpenGL -framework AppKit
 SRCS = $(wildcard ./src/*.c \

@@ -6,23 +6,11 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:28 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/05/01 11:46:50 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:08:59 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-void	ft_close_map(t_mlx *mlx)
-{
-	int	i;
-
-	i = 0;
-	while (mlx->map[i])
-		free(mlx->map[i++]);
-	free(mlx->map);
-	while (mlx->map_c[i])
-		free(mlx->map_c[i++]);
-}
 
 void	ft_map_check(t_mlx *mlx, t_img *img)
 {

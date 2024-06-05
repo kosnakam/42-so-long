@@ -6,22 +6,21 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:06:01 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/29 18:02:22 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:09:04 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// __attribute__((destructor))
-// void	destructor(void)
-// {
-// 	system("leaks -q so_long 1>&2");
-// }
+__attribute__((destructor))
+void	destructor(void)
+{
+	system("leaks -q so_long 1>&2");
+}
 
 void	ft_error(char *msg, t_mlx *mlx)
 {
 	ft_printf("%s\n", msg);
-	ft_close_map(mlx);
 	exit(0);
 }
 
