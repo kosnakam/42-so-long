@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:10:57 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/29 18:33:16 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:24:37 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_count_lines(t_mlx *mlx, int fd)
 int	ft_close_window(t_mlx *mlx)
 {
 	mlx_destroy_window(mlx->mlx, mlx->mlx_win);
-	ft_error("よく頑張った", mlx);
+	ft_error("よく頑張った");
 	exit(0);
 }
 

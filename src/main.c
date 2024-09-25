@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:06:01 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/09/25 14:32:28 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:24:06 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // 	system("leaks -q so_long 1>&2");
 // }
 
-void	ft_error(char *msg, t_mlx *mlx)
+void	ft_error(char *msg)
 {
 	ft_printf("%s\n", msg);
 	exit(0);
@@ -33,7 +33,7 @@ void	ft_merror(char *msg)
 int	key_check(int key_code, t_mlx *mlx)
 {
 	if (key_code == ESC)
-		ft_error("よく頑張った", mlx);
+		ft_error("よく頑張った");
 	if (key_code == UP)
 		ft_move_up(mlx);
 	if (key_code == DOWN)

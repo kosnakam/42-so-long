@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:41:50 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/09/25 14:38:28 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:23:42 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ typedef struct s_img
 	int		img_height;
 }	t_img;
 
-void	ft_error(char *msg, t_mlx *mlx);
+void	ft_error(char *msg);
 void	ft_merror(char *msg);
 void	ft_window_size(t_mlx *mlx, char **argv);
 void	ft_create_map(t_mlx *mlx);

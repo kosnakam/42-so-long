@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:28 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/06/05 17:08:59 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:24:33 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ void	ft_map_check(t_mlx *mlx, t_img *img)
 			ft_put_img(*img, j * SIZE, i * SIZE);
 			if ((i == 0 || j == 0 || j == mlx->map_x - 1 || i == mlx->map_y - 1)
 				&& mlx->map[i][j] != '1')
-				ft_error("Error\n最後の行を改行していないか、壁に穴が空いています", mlx);
+				ft_error("Error\n最後の行を改行していないか、壁に穴が空いています");
 			ft_put_piece(mlx, img, i, j);
 			j++;
 		}
 		i++;
 	}
 	if (mlx->pflag != 1)
-		ft_error("Error\nキャラクターは一体だけです", mlx);
+		ft_error("Error\nキャラクターは一体だけです");
 	if (mlx->cflag == 0)
-		ft_error("Error\nマップにアイテムが一つも含まれていません", mlx);
+		ft_error("Error\nマップにアイテムが一つも含まれていません");
 	if (mlx->eflag != 1)
-		ft_error("Error\n出口は一つだけです", mlx);
+		ft_error("Error\n出口は一つだけです");
 }
 
 void	ft_clear_check(t_mlx *mlx, int y, int x)
@@ -68,11 +68,11 @@ void	ft_map_check2(t_mlx *mlx)
 		x = 0;
 		if (ft_strlen(mlx->map[y]) - 1 != (size_t)(mlx->map_x)
 			&& y != (mlx->map_y))
-			ft_error("Error\nマップは四角でなくてはなりません", mlx);
+			ft_error("Error\nマップは四角でなくてはなりません");
 		while (x < mlx->map_x)
 		{
 			if (!(mlx->map_c[y][x] == '0' || mlx->map_c[y][x] == '1'))
-				ft_error("Error\nクリア出来ないマップです", mlx);
+				ft_error("Error\nクリア出来ないマップです");
 			x++;
 		}
 		y++;
@@ -93,7 +93,7 @@ void	ft_create_map(t_mlx *mlx)
 	if (!mlx->map || !mlx->map_c)
 		ft_merror("Error\nマロックに失敗しました泣");
 	if (mlx->map[mlx->map_y] && mlx->map[mlx->map_y][0] != '\0')
-		ft_error("Error\nマップに誤りがあります", mlx);
+		ft_error("Error\nマップに誤りがあります");
 	while (y < mlx->map_y)
 	{
 		mlx->map[y] = get_next_line(fd);

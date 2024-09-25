@@ -152,9 +152,8 @@ clean:
 	@echo $(R) "$(NAME) cleaning \n" $(X)
 	@${RM} ${OBJ_DIR}
 
-fclean:
+fclean: clean
 	@echo $(R) "$(NAME) fcleaning \n" $(X)
-	@${RM} ${OBJ_DIR}
 	@${RM} ${NAME}
 
 re: fclean all

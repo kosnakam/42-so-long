@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:21:49 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/04/19 16:02:35 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:23:56 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_move_check(t_mlx *mlx, int x, int y)
 	else if (mlx->map[y / SIZE][x / SIZE] == 'E')
 	{
 		if (mlx->play.c_count == mlx->cflag)
-			ft_error("おめ", mlx);
+			ft_error("おめ");
 		else
 		{
 			ft_printf("アイテムを全部集めましょう\n");
