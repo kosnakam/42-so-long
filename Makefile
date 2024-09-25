@@ -6,7 +6,7 @@
 #    By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 11:59:48 by kosnakam          #+#    #+#              #
-#    Updated: 2024/09/25 16:21:23 by kosnakam         ###   ########.fr        #
+#    Updated: 2024/09/25 17:45:19 by kosnakam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ $(NAME): $(OBJ_DIR) $(OBJS)
 	@echo $(B) "<-- Out of $(LIBFT_DIR)\n" $(X)
 	@echo $(B) "$(NAME) creating" $(X)
 	@printf $(UP)$(CUT)
-	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT_DIR)$(LIBFT_NAME) $(MLX_DIR)$(MLX_NAME) $(LFLAGS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) $(LFLAGS) $(MLX_DIR)$(MLX_NAME) $(LIBFT_DIR)$(LIBFT_NAME) -o $(NAME)
 	@echo $(G) "!! $(NAME) created !!\n" $(X)
 
 $(OBJ_DIR):
@@ -79,8 +79,9 @@ clean:
 	@$(RM) $(OBJ_DIR)
 	@echo $(R) "$(OBJ_DIR) has been removed!!" $(X)
 
-fclean: clean
+fclean:
 	@$(MAKE) -C $(LIBFT_DIR) fclean
+	@$(RM) $(OBJ_DIR)
 	@$(RM) $(NAME)
 	@echo $(R) "$(NAME) $(OBJ_DIR) has been removed!!" $(X)
 

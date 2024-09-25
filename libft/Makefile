@@ -149,7 +149,7 @@ $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
 
 clean:
-	@echo $(R) "$(NAME) cleaning \n" $(X)
+	@echo $(R) "$(OBJ_DIR) cleaning \n" $(X)
 	@${RM} ${OBJ_DIR}
 
 fclean: clean
