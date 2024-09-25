@@ -6,7 +6,7 @@
 /*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:41:50 by kosnakam          #+#    #+#             */
-/*   Updated: 2024/06/05 17:09:09 by kosnakam         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:38:28 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 # include "libft.h"
 # include "ft_printf.h"
-# include "get_next_line_bonus.h"
+# include "get_next_line.h"
 # include "mlx.h"
 
 typedef struct s_play

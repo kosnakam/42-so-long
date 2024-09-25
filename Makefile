@@ -1,20 +1,20 @@
-# **************************************************************************** #
+# # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    b                                                  :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 14:16:16 by kosnakam          #+#    #+#              #
-#    Updated: 2024/06/05 17:02:48 by kosnakam         ###   ########.fr        #
+#    Updated: 2024/09/25 15:49:57 by kosnakam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 CC = cc
 # FLAGS = -Wall -Wextra -Werror
-IFRAGS = -Iminilibx_opengl_20191021 -Iinclude -Iutils/gnl -Iutils/printf -Iutils/libft
-MFLAGS = -Lminilibx_opengl_20191021 -lmlx -lz -framework OpenGL -framework AppKit
+IFRAGS = -Iminilibx -Iinclude -Ilibft/include
+MFLAGS = -Lminilibx -lmlx -lz -framework OpenGL -framework AppKit
 SRCS = $(wildcard ./src/*.c \
 		./utils/libft/*.c \
 		./utils/printf/*.c \
@@ -38,16 +38,19 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@printf $(CUT)
 	@echo $(Y)Compiling [$(NAME)]...$(X)
-	@$(CC) $(OBJS) $(MFLAGS) -o $(NAME)
+	@make -C libft/
+	@$(CC) $(OBJS) $(MFLAGS) minilibx/libmlx.a libft/libft.a -o $(NAME)
 	@echo $(G)Finished [$(NAME)]$(X)
 	@echo
 
 clean:
 	@rm -rf $(OBJS)
+	@make -C libft/ clean
 	@echo $(R)Removed [$(OBJS)]$(X)
 
 fclean: clean
 	@rm -rf $(NAME)
+	@make -C libft/ fclean
 	@echo $(R)Removed [$(NAME)]$(X)
 
 re: fclean all
