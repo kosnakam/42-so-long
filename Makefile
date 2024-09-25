@@ -6,7 +6,7 @@
 #    By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 11:59:48 by kosnakam          #+#    #+#              #
-#    Updated: 2024/09/25 17:45:19 by kosnakam         ###   ########.fr        #
+#    Updated: 2024/09/25 17:49:03 by kosnakam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ MLX_DIR			= minilibx/
 
 # flags
 CFLAGS			= -Wall -Wextra -Werror
-LFLAGS			= -L$(MLX_DIR) -lmlx -lz
+LFLAGS			= -L$(MLX_DIR) -lXext -lX11
 
 # include
 INCLUDE_DIR		= include/
