@@ -1,4 +1,4 @@
-# so_long
+# So Long
 
 [![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Makefile](https://img.shields.io/badge/Makefile-000000?style=flat-square&logo=gnu&logoColor=white)](https://www.gnu.org/software/make/)
